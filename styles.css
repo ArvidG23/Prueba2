@@ -136,3 +136,41 @@ h1 {
     background-color: #f0fff4;
     color: #2f855a;
 }
+
+/* Estilos para los botones de tarea */
+.botones-tarea {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.boton-cumplida, .boton-eliminar {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.boton-cumplida {
+    background-color: #2ecc71; 
+}
+
+.boton-cumplida:hover {
+    background-color: #27ae60;
+}
+
+.boton-eliminar {
+    background-color: #e74c3c; 
+    color: white;
+}
+
+.boton-eliminar:hover {
+    background-color: #c0392b;
+}
+
+.tarea-card.cumplida {
+    opacity: 0.5;
+    border-left: 4px solid #2ecc71 !important;
+}

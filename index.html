@@ -1,17 +1,88 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lista de Tareas</title>
-  <link rel="stylesheet" href="estilo.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Tareas Único</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>Mi Lista de Tareas</h1>
-  <p>Nombre del estudiante: __________________________</p>
+  <header>
+    <h1>🛹 Tareas por hacer</h1> 
+    <p id="autor">Lo que Arvid tiene que hacer</p>
+</header>
 
-  <!-- Aquí irá el formulario y la lista generada con JavaScript -->
+    <main>
+        <form id="formulario-tarea" class="formulario-estilo">
+            <h2>📌 Nueva Tarea</h2>
+            
+            <div class="campo-formulario">
+                <label for="input-nombre">Nombre:</label>
+                <input 
+                    type="text" 
+                    id="input-nombre" 
+                    maxlength="25" 
+                    placeholder="Máximo 25 caracteres"
+                    required
+                >
+            </div>
 
-  <script src="app.js"></script>
+            <div class="campo-formulario">
+                <label for="input-fecha">Fecha de entrega:</label>
+                <input 
+                    type="date" 
+                    id="input-fecha" 
+                    required
+                >
+            </div>
+
+            <div class="campo-formulario">
+                <label for="input-descripcion">Descripción:</label>
+                <textarea 
+                    id="input-descripcion" 
+                    rows="3" 
+                    placeholder="Detalles de la tarea..."
+                ></textarea>
+            </div>
+
+            <div class="campo-formulario">
+                <label for="select-tipo">Tipo:</label>
+                <select id="select-tipo">
+                    <option value="" disabled selected>Selecciona un tipo</option>
+                    <option value="Universidad">Universidad</option>
+                    <option value="Trabajo">Trabajo</option>
+                    <option value="Personal">Personal</option>
+                    <option value="Hobby">Patinar</option>
+                </select>
+            </div>
+
+            <div class="campo-formulario">
+                <label>Prioridad:</label>
+                <div class="opciones-prioridad">
+                    <label>
+                        <input type="radio" name="prioridad" value="Urgente" required>
+                        Urgente
+                    </label>
+                    <label>
+                        <input type="radio" name="prioridad" value="Normal">
+                        Normal
+                    </label>
+                    <label>
+                        <input type="radio" name="prioridad" value="Baja">
+                        Baja
+                    </label>
+                </div>
+            </div>
+
+            <button type="submit" id="boton-agregar">➕ Agregar Tarea</button>
+        </form>
+
+        <section id="seccion-tareas" class="contenedor-tareas">
+            <h2>📋 Mis Tareas</h2>
+            <div id="lista-tareas"></div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
 </body>
 </html>

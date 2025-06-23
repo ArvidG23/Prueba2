@@ -1,0 +1,138 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f8fafc; 
+    color: #2d3748;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e2e8f0; 
+}
+
+h1 {
+    color: #2b6cb0;
+    font-weight: 600;
+}
+
+#autor {
+    font-style: italic;
+    color: #4a5568; 
+}
+
+.formulario-estilo {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    border: 1px solid #e2e8f0;
+}
+
+.campo-formulario {
+    margin-bottom: 20px;
+}
+
+.campo-formulario label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #4a5568;
+}
+
+.campo-formulario input[type="text"],
+.campo-formulario input[type="date"],
+.campo-formulario textarea,
+.campo-formulario select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cbd5e0;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border-color 0.2s;
+}
+
+.campo-formulario input:focus,
+.campo-formulario textarea:focus,
+.campo-formulario select:focus {
+    border-color: #4299e1;
+    outline: none;
+}
+
+.opciones-prioridad {
+    display: flex;
+    gap: 15px;
+    margin-top: 8px;
+}
+
+#boton-agregar {
+    background-color: #3182ce; 
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+
+#boton-agregar:hover {
+    background-color: #2b6cb0; 
+}
+
+.contenedor-tareas {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e2e8f0;
+}
+
+.tarea-card {
+    background: #f8fafc;
+    border-left: 4px solid #3182ce; 
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    transition: transform 0.2s;
+}
+
+.tarea-card:hover {
+    transform: translateX(2px);
+}
+
+.tarea-card h3 {
+    margin-top: 0;
+    color: #2b6cb0;
+    font-size: 1.2rem;
+}
+
+.tarea-card .tarea-prioridad {
+    font-weight: 600;
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.tarea-card .tarea-prioridad.urgente {
+    background-color: #fff5f5;
+    color: #c53030;
+}
+
+.tarea-card .tarea-prioridad.normal {
+    background-color: #fffaf0;
+    color: #dd6b20;
+}
+
+.tarea-card .tarea-prioridad.baja {
+    background-color: #f0fff4;
+    color: #2f855a;
+}
